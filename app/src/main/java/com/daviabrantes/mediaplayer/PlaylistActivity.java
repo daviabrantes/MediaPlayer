@@ -16,7 +16,7 @@ import java.util.ArrayList;
 
 import adapter.SongAdapter;
 
-public class MainActivity extends AppCompatActivity {
+public class PlaylistActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
                 Song selectedSong = (Song) listView.getAdapter().getItem(i);
                 String songName = selectedSong.getSong();
                 String artistName = selectedSong.getArtist();
-                Intent intent = new Intent(MainActivity.this, SongActivity.class);
+                Intent intent = new Intent(PlaylistActivity.this, SongActivity.class);
                 intent.putExtra("songName", songName);
                 intent.putExtra("artistName", artistName);
                 startActivity(intent);

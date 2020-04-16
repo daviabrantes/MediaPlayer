@@ -15,6 +15,8 @@ public class SongActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_song);
 
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         TextView txtSong = findViewById(R.id.txt_song_name);
         TextView txtArtist = findViewById(R.id.txt_artist_name);
 
@@ -25,5 +27,8 @@ public class SongActivity extends AppCompatActivity {
 
         txtSong.setText(songName);
         txtArtist.setText(artistName);
+        getSupportActionBar().setTitle(songName + " by " + artistName);
+
+
     }
 }
